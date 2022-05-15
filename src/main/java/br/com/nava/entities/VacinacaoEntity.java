@@ -1,5 +1,6 @@
 package br.com.nava.entities;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,9 +13,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.modelmapper.ModelMapper;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import br.com.nava.dtos.VacinacaoDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,17 +34,20 @@ public class VacinacaoEntity {
 	
 	@Column(name = "data_aplic")
 	@JsonFormat(pattern = "yyyy-MM-dd")
-	private LocalDateTime dataAplic;
+	private LocalDate dataAplic;
 	
 	@Column(name = "num_dose")
 	private String numDose;
 	
 	@Column(name = "data_prox_aplic")
 	@JsonFormat(pattern = "yyyy-MM-dd")
-	private LocalDateTime dataProxAplic;
+	private LocalDate dataProxAplic;
 	
 	@Column(name = "id_usuario")
 	private Integer idUsuario;
+	
+	@Column(name = "id_vacina")
+	private Integer idVacina;
 	
 	//Relacionamento com o Usuario 
 	@ManyToOne
@@ -52,9 +58,9 @@ public class VacinacaoEntity {
 	@JoinColumn(name = "VACINA_ID")
 	private VacinaEntity vacina;
 	
-//	public VacinacaoDTO toDTO() {												
-//		ModelMapper mapper = new ModelMapper();
-//		VacinacaoDTO dto = mapper.map(this, VacinacaoDTO.class);
-//		return dto;
-//	}
+	public VacinacaoDTO toDTO() {												
+		ModelMapper mapper = new ModelMapper();
+		VacinacaoDTO dto = mapper.map(this, VacinacaoDTO.class);
+		return dto;
+	}
 }
