@@ -1,12 +1,9 @@
 package br.com.nava.dtos;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import org.modelmapper.ModelMapper;
 
-import br.com.nava.entities.UsuarioEntity;
-import br.com.nava.entities.VacinaEntity;
 import br.com.nava.entities.VacinacaoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;

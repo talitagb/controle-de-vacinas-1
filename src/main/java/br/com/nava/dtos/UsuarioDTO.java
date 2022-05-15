@@ -6,10 +6,6 @@ import org.modelmapper.ModelMapper;
 
 import br.com.nava.entities.UsuarioEntity;
 
-//import org.modelmapper.ModelMapper;
-
-//import br.com.nava.entities.UsuarioEntity;
-//import br.com.nava.entities.VacinaEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
