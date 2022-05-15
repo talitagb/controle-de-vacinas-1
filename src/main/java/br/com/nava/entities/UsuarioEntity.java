@@ -1,5 +1,6 @@
 package br.com.nava.entities;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class UsuarioEntity {
 	
 	@Column(name = "data_nasc")
 	@JsonFormat(pattern = "yyyy-MM-dd")
-	private LocalDateTime dataNasc;
+	private LocalDate dataNasc;
 	
 	@Column(name = "endereco_usuario")
 	private String enderecoUsuario;

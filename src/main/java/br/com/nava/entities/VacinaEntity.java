@@ -10,8 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.modelmapper.ModelMapper;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import br.com.nava.dtos.UsuarioDTO;
+import br.com.nava.dtos.VacinaDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,4 +45,10 @@ public class VacinaEntity {
 	@JsonIgnore
 	@OneToMany(mappedBy = "vacina")
 	private List<VacinacaoEntity> vacinacao;
+	
+	public VacinaDTO toDTO() {												
+		ModelMapper mapper = new ModelMapper();
+		VacinaDTO dto = mapper.map(this, VacinaDTO.class);
+		return dto;
+	}
 }
