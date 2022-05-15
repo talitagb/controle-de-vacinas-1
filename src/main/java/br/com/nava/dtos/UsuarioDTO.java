@@ -2,6 +2,10 @@ package br.com.nava.dtos;
 
 import java.time.LocalDateTime;
 
+import org.modelmapper.ModelMapper;
+
+import br.com.nava.entities.UsuarioEntity;
+
 //import org.modelmapper.ModelMapper;
 
 //import br.com.nava.entities.UsuarioEntity;
@@ -14,14 +18,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UsuarioDTO {
+	private Integer id;
 	private String nomeUsuario;
 	private String cpfUsuario;
 	private LocalDateTime dataNasc;
 	private String enderecoUsuario;
 	private String telefoneUsuario;
 	
-//	public UsuarioEntity toEntity() {											
-//		ModelMapper mapper = new ModelMapper();
-//		return mapper.map(this, UsuarioEntity.class);
-//	}
+	public UsuarioEntity toEntity() {											
+		ModelMapper mapper = new ModelMapper();
+		return mapper.map(this, UsuarioEntity.class);
+	}
 }
