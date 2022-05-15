@@ -1,6 +1,6 @@
 package br.com.nava.dtos;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.modelmapper.ModelMapper;
 
@@ -21,7 +21,7 @@ public class UsuarioDTO {
 	private Integer id;
 	private String nomeUsuario;
 	private String cpfUsuario;
-	private LocalDateTime dataNasc;
+	private LocalDate dataNasc;
 	private String enderecoUsuario;
 	private String telefoneUsuario;
 	
