@@ -12,10 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.modelmapper.ModelMapper;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import br.com.nava.dtos.UsuarioDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -50,9 +52,9 @@ public class UsuarioEntity {
 	@OneToMany(mappedBy = "usuario")
 	private List<VacinacaoEntity> vacinacao;
 	
-//	public UsuarioDTO toDTO() {												
-//		ModelMapper mapper = new ModelMapper();
-//		UsuarioDTO dto = mapper.map(this, UsuarioDTO.class);
-//		return dto;
-//	}
+	public UsuarioDTO toDTO() {												
+		ModelMapper mapper = new ModelMapper();
+		UsuarioDTO dto = mapper.map(this, UsuarioDTO.class);
+		return dto;
+	}
 }
