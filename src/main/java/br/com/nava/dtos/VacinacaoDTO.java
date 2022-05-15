@@ -1,7 +1,13 @@
 package br.com.nava.dtos;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import org.modelmapper.ModelMapper;
+
+import br.com.nava.entities.UsuarioEntity;
+import br.com.nava.entities.VacinaEntity;
+import br.com.nava.entities.VacinacaoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,13 +17,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class VacinacaoDTO {
-	private LocalDateTime dataAplic;
+	private Integer id;
+	private LocalDate dataAplic;
 	private String numDose;
-	private LocalDateTime dataProxAplic;
+	private LocalDate dataProxAplic;
 	private Integer idUsuario;
+	private Integer idVacina;
 	
-//	public VacinacaoEntity toEntity() {											
-//		ModelMapper mapper = new ModelMapper();
-//		return mapper.map(this, VacinacaoEntity.class);
-//	}
+	public VacinacaoEntity toEntity() {											
+		ModelMapper mapper = new ModelMapper();
+		return mapper.map(this, VacinacaoEntity.class);
+	}
 }
