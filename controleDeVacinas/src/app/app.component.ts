@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'controleDeVacinas';
+  title = 'projeto-angular';
+  empresa = 'Nava';
+  corFundo = 'background-color: yellow;';
+
+  getColor(){ // quando as variaveis são locais precisa por o let, e tipar
+    let color : string = 'yellow'
+    return color;
+  }
+  clicar(){
+    alert("botão clicado")
+  }
+  getTextoDigitado(elemento : any){
+    console.log(elemento.value)
+    this.empresa = elemento.value;
+  }
 }
