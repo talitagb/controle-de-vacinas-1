@@ -6,7 +6,7 @@ import { VacinasComponent } from './vacinas/vacinas.component';
 const routes: Routes =
 [
   {path: 'vacinas/criar', component: VacinasFormComponent},
-  {path: 'vacinas/', component: VacinasComponent},
+  {path: 'vacinas', component: VacinasComponent},
   {path: 'vacinas/editar/:id', component: VacinasFormComponent},
 ];
 
