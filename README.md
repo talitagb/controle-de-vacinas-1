@@ -6,7 +6,7 @@
 <p align="center">API de um sistema para o controle de vacinas</p>
 
 <div align="center">
-É uma aplicação web planejada por mim, realizamos o CRUD.
+É uma aplicação web planejada por mim, realizei o CRUD.
 
 <p align="justify">O sistema de controle de vacinas é um sistema onde o usuário pode cadastrar, atualizar e excluir vacinas, pode incluir e excluir usuários e registrar e consultar o processo de vacinação.</p>
 </div>
