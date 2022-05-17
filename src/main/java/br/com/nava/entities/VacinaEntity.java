@@ -36,10 +36,10 @@ public class VacinaEntity {
 	private String fabricanteVacina;
 	
 	@Column(name = "qntd_doses")
-	private Integer qntdDoses;
+	private String qntdDoses;
 	
 	@Column(name = "qntd_dias_doses")
-	private Integer qntdDiasDoses;
+	private String qntdDiasDoses;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "vacina")

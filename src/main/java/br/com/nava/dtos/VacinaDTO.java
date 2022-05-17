@@ -14,8 +14,8 @@ public class VacinaDTO {
 	private Integer id;
 	private String nomeVacina;
 	private String fabricanteVacina;
-	private Integer qntdDoses;
-	private Integer qntdDiasDoses;
+	private String qntdDoses;
+	private String qntdDiasDoses;
 	
 	public VacinaEntity toEntity() {											
 		ModelMapper mapper = new ModelMapper();
