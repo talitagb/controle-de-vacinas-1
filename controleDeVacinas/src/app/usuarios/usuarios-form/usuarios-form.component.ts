@@ -10,14 +10,10 @@ import { UsuarioService } from '../usuarios.service';
 })
 export class UsuariosFormComponent implements OnInit {
 
-  // 1-) alocar a variável que vai ter os controles do form
   meuForm : FormGroup = new FormGroup({});
-  // para saber se é edição
   isEdicao : boolean = false;
-  // id de quem estou alterando
   id : number = -1;
 
-  // 2-) injetar o FormBuilder para poder ajudar a criar os controles do form
   constructor(
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
@@ -25,7 +21,6 @@ export class UsuariosFormComponent implements OnInit {
     private activatedRoute: ActivatedRoute
     ) { }
 
-  // 3-) alocar os controles na variável meuForm através do formBuilder
   ngOnInit(): void {
     this.meuForm = this.formBuilder.group({
       nomeUsuario : [ null, [ Validators.required ] ],
@@ -35,31 +30,26 @@ export class UsuariosFormComponent implements OnInit {
       telefoneUsuario : [ null, [ Validators.required ] ]
     });
 
-    // pegar parâmetros das rotas
 
     this.activatedRoute.params
       .subscribe(
         (parametros: any) => {
           console.log(parametros);
 
-          // é EDIÇÃO
           if (parametros.id){
             console.log(`edição id ${parametros.id}`);
 
             this.isEdicao = true;
             this.id = parametros.id;
 
-            // PRECISO consultar a API para buscar todas as informações do ID a ser editado
             this.usuarioService.getOne(parametros.id)
               .subscribe(
                 (dadosUsuarios) => {
                   console.log(dadosUsuarios);
-                  // patchValue atualiza os campos do formulário de acordo com o nome dos controles
                   this.meuForm.patchValue(dadosUsuarios);
                 }
               );
           }
-          // é CRIAÇÃO
           else {
             console.log(`criação`);
             this.isEdicao = false;

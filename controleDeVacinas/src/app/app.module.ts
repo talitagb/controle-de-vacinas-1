@@ -7,6 +7,7 @@ import { FormulariosModule } from './formularios/formularios.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { VacinasModule } from './vacinas/vacinas.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     AppRoutingModule,
     FormsModule,
     UsuariosModule,
+    VacinasModule,
     FormulariosModule,
     NgbModule,
   ],

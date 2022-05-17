@@ -5,11 +5,9 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes =
 [
-  // ROTAS ESTATICAS PRECISAM VIM PRIMEIRO
   {path: 'usuarios/criar', component: UsuariosFormComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'usuarios/editar/:id', component: UsuariosFormComponent},
- // {path: 'professores/:id', component: ListarComponent},
 ];
 
 @NgModule({

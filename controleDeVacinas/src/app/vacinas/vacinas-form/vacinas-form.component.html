@@ -1,1 +1,62 @@
-<p>vacinas-form works!</p>
+<form [formGroup]="meuForm" (submit)="onSubmit()" >
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+          <div class="form-group">
+              <label >Nome da Vacina</label>
+              <input type="text" class="form-control" formControlName="nomeVacina" placeholder="Nome da Vacina">
+          </div>
+
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['nomeVacina']"
+              [mensagem]="'Erro ao preencher vacina'"
+          ></app-mostrar-mensagem>
+
+      </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+        <div class="form-group">
+          <label >Fabricante Vacina</label>
+          <input type="text" class="form-control" formControlName="fabricanteVacina" placeholder="Fabricante da Vacina">
+      </div>
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['fabricanteVacina']"
+              [mensagem]="'Erro ao preencher Fabricante da Vacina'"
+          ></app-mostrar-mensagem>
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+          <div class="form-group">
+              <label >Número da dose</label>
+              <input type="number" class="form-control" formControlName="qntdDoses" placeholder="Número da dose(1ª ou 2ª dose)">
+          </div>
+
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['qntdDoses']"
+              [mensagem]="'Erro ao preencher Número da dose'"
+          ></app-mostrar-mensagem>
+
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+          <div class="form-group">
+              <label >Quantos dias até a próxima dose</label>
+              <input type="number" class="form-control" formControlName="qntdDiasDoses" placeholder="Data da próxima aplicação">
+          </div>
+
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['qntdDiasDoses']"
+              [mensagem]="'Erro ao preencher Quantos dias até a próxima dose'"
+          ></app-mostrar-mensagem>
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+
+</form>

@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { VacinasRoutingModule } from './vacinas-routing.module';
-import { VacinasComponentComponent } from './vacinas/vacinas-component/vacinas-component.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShareModule } from '../share/share.module';
 import { VacinasComponent } from './vacinas/vacinas.component';
 import { VacinasFormComponent } from './vacinas-form/vacinas-form.component';
+import { VacinasRoutingModule } from './vacinas-routing.module';
 
 
 @NgModule({
   declarations: [
-    VacinasComponentComponent,
     VacinasComponent,
-    VacinasFormComponent
+    VacinasFormComponent,
   ],
   imports: [
     CommonModule,
-    VacinasRoutingModule
+    VacinasRoutingModule,
+    HttpClientModule,
+    ShareModule
+  ],
+  exports: [
+    VacinasComponent
   ]
 })
 export class VacinasModule { }
