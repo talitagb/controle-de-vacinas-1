@@ -1,31 +1,57 @@
 <form [formGroup]="meuForm">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="exampleInputEmail1">Nome</label>
+    <input type="text" class="form-control" formControlName="nomeUsuario" placeholder="Nome">
   </div>
 
   <!-- <app-mostrar-mensagem [controles]="meuForm.controls['email']" ></app-mostrar-mensagem> -->
   <app-mostrar-mensagem
-  [controles]="meuForm.controls['email']"
-  [mensagem]="'Erro ao preencher email'"
+  [controles]="meuForm.controls['nomeUsuario']"
+  [mensagem]="'Erro ao preencher Nome'"
   ></app-mostrar-mensagem>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" formControlName="password" placeholder="Password">
+    <label for="exampleInputEmail1">CPF</label>
+    <input type="text" class="form-control" formControlName="cpfUsuario" aria-describedby="emailHelp" placeholder="CPF">
+  </div>
+
+  <!-- <app-mostrar-mensagem [controles]="meuForm.controls['email']" ></app-mostrar-mensagem> -->
+  <app-mostrar-mensagem
+  [controles]="meuForm.controls['cpfUsuario']"
+  [mensagem]="'Erro ao preencher CPF'"
+  ></app-mostrar-mensagem>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Data de Nascimento</label>
+    <input type="text" class="form-control" formControlName="dataNasc" placeholder="Data de Nascimento">
   </div>
   <!-- <app-mostrar-mensagem [controles]="meuForm.controls['password']" ></app-mostrar-mensagem> -->
   <app-mostrar-mensagem
-  [controles]="meuForm.controls['password']"
-  [mensagem]="'Erro ao preencher password'"
+  [controles]="meuForm.controls['dataNasc']"
+  [mensagem]="'Erro ao preencher Data de Nascimento'"
   ></app-mostrar-mensagem>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Endereço</label>
+    <input type="text" class="form-control" formControlName="enderecoUsuario" placeholder="Endereço">
   </div>
-  <p>
-      Form: {{ meuForm.status }}
-  </p>
+
+  <!-- <app-mostrar-mensagem [controles]="meuForm.controls['email']" ></app-mostrar-mensagem> -->
+  <app-mostrar-mensagem
+  [controles]="meuForm.controls['enderecoUsuario']"
+  [mensagem]="'Erro ao preencher Endereço'"
+  ></app-mostrar-mensagem>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Telefone</label>
+    <input type="text" class="form-control" formControlName="telefoneUsuario"  placeholder="Telefone">
+  </div>
+
+  <!-- <app-mostrar-mensagem [controles]="meuForm.controls['email']" ></app-mostrar-mensagem> -->
+  <app-mostrar-mensagem
+  [controles]="meuForm.controls['telefoneUsuario']"
+  [mensagem]="'Erro ao preencher Telefone'"
+  ></app-mostrar-mensagem>
+<br>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -28,10 +28,11 @@ export class UsuariosFormComponent implements OnInit {
   // 3-) alocar os controles na variável meuForm através do formBuilder
   ngOnInit(): void {
     this.meuForm = this.formBuilder.group({
-      nome : [ null, [ Validators.required ] ],
-      rua : [ null, [ Validators.required ] ],
-      numero : [ null, [ Validators.required ] ],
-      cep : [ null, [ Validators.required ] ]
+      nomeUsuario : [ null, [ Validators.required ] ],
+      cpfUsuario : [ null, [ Validators.required ] ],
+      dataNasc : [ null, [ Validators.required ] ],
+      enderecoUsuario : [ null, [ Validators.required ] ],
+      telefoneUsuario : [ null, [ Validators.required ] ]
     });
 
     // pegar parâmetros das rotas
@@ -66,27 +67,21 @@ export class UsuariosFormComponent implements OnInit {
         }
       );
   }
-  // 4-) integrar os controles do form no HTML
   onSubmit(){
-    //console.log(this.meuForm.value);
-    // edicao igual a false significa que é criação
     if (this.isEdicao == false){
       this.usuarioService.save(this.meuForm.value)
       .subscribe(
         (data) => {
           console.log(data);
-          // o navigate é para redirecionar para uma outra rota de interesse
           this.router.navigate(['/usuarios']);
         }
       );
     }
-    //é alteração de algum registro
     else{
       this.usuarioService.update(this.id, this.meuForm.value)
         .subscribe(
           (data) => {
             console.log(data);
-            // o navigate é para redirecionar para uma outra rota de interesse
             this.router.navigate(['/usuarios']);
           }
         );

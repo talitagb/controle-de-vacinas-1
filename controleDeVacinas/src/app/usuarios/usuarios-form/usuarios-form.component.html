@@ -3,7 +3,7 @@
       <div class="col-8">
           <div class="form-group">
               <label >Nome</label>
-              <input type="text" class="form-control" formControlName="nome" placeholder="Nome">
+              <input type="text" class="form-control" formControlName="nomeUsuario" placeholder="Nome">
           </div>
 
           <app-mostrar-mensagem
@@ -31,7 +31,7 @@
       <div class="col-8">
           <div class="form-group">
               <label >Data de Nascimento</label>
-              <input type="text" class="form-control" formControlName="dataNasc" placeholder="Data de Nascimento">
+              <input type="date" class="form-control" formControlName="dataNasc" placeholder="Data de Nascimento">
           </div>
 
           <app-mostrar-mensagem
@@ -55,7 +55,19 @@
           ></app-mostrar-mensagem>
       </div>
   </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-8">
+        <div class="form-group">
+            <label >Telefone</label>
+            <input type="text" class="form-control" formControlName="telefoneUsuario" placeholder="Telefone">
+        </div>
 
+        <app-mostrar-mensagem
+            [controles]="meuForm.controls['telefoneUsuario']"
+            [mensagem]="'Erro ao preencher Telefone'"
+        ></app-mostrar-mensagem>
+    </div>
+</div>
   <div class="row d-flex justify-content-center">
       <button type="submit" class="btn btn-primary">Salvar</button>
   </div>

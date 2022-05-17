@@ -21,7 +21,6 @@ export class UsuarioService {
   }
 
   delete(id : number){
-    //return this.httpClient.delete('http://localhost:8080/professores/' + id);
     return this.httpClient.delete(`${environment.api_url}/usuarios/${id}`);
   }
 
