@@ -3,6 +3,8 @@ export class VacinacaoModel{
   dataAplic? : string;
   numDose? : string;
   dataProxAplic? : string;
-  idUsuario? : number;
-  idVacina? : number;
+  idUsuario? : string;
+  idVacina? : string;
+  usuario ? : string;
+  vacina ? : string;
 }

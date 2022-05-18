@@ -29,13 +29,13 @@
   <div class="row d-flex justify-content-center">
       <div class="col-8">
           <div class="form-group">
-              <label >Número da dose</label>
-              <input type="text" class="form-control" formControlName="qntdDoses" placeholder="Número da dose(1ª ou 2ª dose)">
+              <label >Quantidade de Doses Necessárias</label>
+              <input type="text" class="form-control" formControlName="qntdDoses" placeholder="Quantidade de Doses Necessárias">
           </div>
 
           <app-mostrar-mensagem
               [controles]="meuForm.controls['qntdDoses']"
-              [mensagem]="'Erro ao preencher Número da dose'"
+              [mensagem]="'Erro ao preencher Quantidade de Doses Necessárias'"
           ></app-mostrar-mensagem>
 
       </div>

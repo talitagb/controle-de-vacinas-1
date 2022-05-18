@@ -1,1 +1,76 @@
-<p>vacinacao-form works!</p>
+<form [formGroup]="meuForm" (submit)="onSubmit()" >
+  <div class="row d-flex justify-content-center">
+
+      <div class="col-8">
+          <div class="form-group">
+              <label >Data da aplicação</label>
+              <input type="date" class="form-control" formControlName="dataAplic" placeholder="Data da aplicação da vacina">
+          </div>
+
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['dataAplic']"
+              [mensagem]="'Erro ao preencher data da aplicação'"
+          ></app-mostrar-mensagem>
+
+      </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+        <div class="form-group">
+          <label >Número da dose</label>
+          <input type="text" class="form-control" formControlName="numDose" placeholder="Número da dose (1ª ou 2ª dose)">
+      </div>
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['numDose']"
+              [mensagem]="'Erro ao preencher Número da dose'"
+          ></app-mostrar-mensagem>
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+      <div class="col-8">
+          <div class="form-group">
+              <label >Data da próxima aplicação</label>
+              <input type="date" class="form-control" formControlName="dataProxAplic" placeholder="Data da próxima aplicação">
+          </div>
+
+          <app-mostrar-mensagem
+              [controles]="meuForm.controls['dataProxAplic']"
+              [mensagem]="'Erro ao preencher Data da próxima aplicação'"
+          ></app-mostrar-mensagem>
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-8">
+        <div class="form-group">
+            <label >ID Usuário</label>
+            <input type="text" class="form-control" formControlName="idUsuario" placeholder="">
+        </div>
+
+        <app-mostrar-mensagem
+            [controles]="meuForm.controls['idUsuario']"
+            [mensagem]="'Erro ao preencher id Usuário'"
+        ></app-mostrar-mensagem>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-8">
+      <div class="form-group">
+          <label >ID Vacina</label>
+          <input type="text" class="form-control" formControlName="idVacina" placeholder="">
+      </div>
+
+      <app-mostrar-mensagem
+          [controles]="meuForm.controls['idVacina']"
+          [mensagem]="'Erro ao preencher id Vacina'"
+      ></app-mostrar-mensagem>
+  </div>
+</div>
+
+  <div class="row d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+
+</form>

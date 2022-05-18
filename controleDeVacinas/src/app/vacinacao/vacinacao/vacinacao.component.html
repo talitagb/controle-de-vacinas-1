@@ -1,1 +1,32 @@
-<p>vacinacao works!</p>
+<div class="row float-end">
+  <button class="btn btn-success" routerLink="/vacinacao/criar"> Criar +</button>
+</div>
+
+<table class="table">
+  <tr>
+      <th> ID </th>
+      <th> Data da Aplicação </th>
+      <th> Número da Dose </th>
+      <th> Data Próxima aplicação </th>
+      <th> ID Usuário </th>
+      <th> ID Vacina </th>
+      <th> Nome Usuário </th>
+      <th> Nome Vacina </th>
+  </tr>
+
+  <tr *ngFor="let p of vacinacao">
+    <td> {{ p.id }} </td>
+    <td> {{ p.dataAplic }} </td>
+    <td> {{ p.numDose }} </td>
+    <td> {{ p.dataProxAplic}} </td>
+    <td> {{ p.idUsuario}} </td>
+    <td> {{ p.idVacina}} </td>
+    <td> {{ p.usuario?.nomeUsuario}} </td>
+    <td> {{ p.vacina}} </td>
+    <td>
+      <button class="btn btn-outline-info"[routerLink]="['/vacinacao/editar', p.id]">Editar</button>
+      <button class="btn btn-outline-danger" (click)="onDelete(p.id!)">Deletar</button>
+    </td>
+  </tr>
+</table>
+
