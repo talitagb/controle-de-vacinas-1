@@ -20,8 +20,10 @@ public class VacinacaoDTO {
 	private LocalDate dataAplic;
 	private String numDose;
 	private LocalDate dataProxAplic;
-	private Integer idUsuario;
-	private Integer idVacina;
+	private String idUsuario;
+	private String idVacina;
+	private UsuarioEntity usuario;
+	private VacinaEntity vacina;
 	
 	public VacinacaoEntity toEntity() {											
 		ModelMapper mapper = new ModelMapper();

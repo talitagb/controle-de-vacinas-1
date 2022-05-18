@@ -42,10 +42,10 @@ public class VacinacaoEntity {
 	private LocalDate dataProxAplic;
 	
 	@Column(name = "id_usuario")
-	private Integer idUsuario;
+	private String idUsuario;
 	
 	@Column(name = "id_vacina")
-	private Integer idVacina;
+	private String idVacina;
 	
 	//Relacionamento com o Usuario 
 	@ManyToOne
