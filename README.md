@@ -1,4 +1,4 @@
-x
+
 <h1 align="center">Controle de Vacinas</h1>
 
 <h4 align="center">Status: Criado</h4>
