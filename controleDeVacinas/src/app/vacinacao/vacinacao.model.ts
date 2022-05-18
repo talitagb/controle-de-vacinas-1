@@ -5,6 +5,4 @@ export class VacinacaoModel{
   dataProxAplic? : string;
   idUsuario? : string;
   idVacina? : string;
-  usuario ? : string;
-  vacina ? : string;
 }
