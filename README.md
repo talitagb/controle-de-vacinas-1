@@ -1,7 +1,7 @@
-
+x
 <h1 align="center">Controle de Vacinas</h1>
 
-<h4 align="center">Status: Developing ⚠️</h4>
+<h4 align="center">Status: Criado</h4>
 
 <p align="center">API de um sistema para o controle de vacinas</p>
 
@@ -10,6 +10,14 @@
 
 <p align="justify">O sistema de controle de vacinas é um sistema onde o usuário pode cadastrar, atualizar e excluir vacinas, pode incluir e excluir usuários e registrar e consultar o processo de vacinação.</p>
 </div>
+
+<h2>Como subir o ambiente:</h2>
+<h4>Banco de dados configurado na porta 3307, o nome do banco de dados é vacinacao</h4>
+<br>
+<h2>Para testar funcionalidades da API:</h2>
+<h4>1º No menu usuários, no botão criar+, criar o 1º usuário.</h4>
+<h4>2º No menu vacinas, no botão criar+, criar a 1ª vacina.</h4>
+<h4>3º No menu vacinação, no botão criar+, criar a 1ª vacinação e indicar o id do usuário e o id da vacina criados anteriormente.</h4>
 
 <div align="center">
 
