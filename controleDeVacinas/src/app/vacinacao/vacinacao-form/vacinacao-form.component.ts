@@ -27,8 +27,6 @@ export class VacinacaoFormComponent implements OnInit {
       dataProxAplic : [ null, [ Validators.required ] ],
       idUsuario : [ null, [ Validators.required ] ],
       idVacina : [ null, [ Validators.required ] ],
-      usuario : [ null, [ Validators.required ] ],
-      vacina : [ null, [ Validators.required ] ],
     });
 
 

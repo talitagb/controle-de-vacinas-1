@@ -1,3 +1,4 @@
+<br>
 <div class="row float-end">
   <button class="btn btn-success" routerLink="/usuarios/criar"> Criar +</button>
 </div>
@@ -21,8 +22,10 @@
     <td> {{ p.telefoneUsuario}} </td>
     <td>
       <button class="btn btn-outline-info"[routerLink]="['/usuarios/editar', p.id]">Editar</button>
-      <button class="btn btn-outline-danger" (click)="onDelete(p.id!)">Deletar</button>
-    </td>
+     </td>
+     <td>
+       <button class="btn btn-outline-danger" (click)="onDelete(p.id!)">Deletar</button>
+     </td>
   </tr>
 </table>
 

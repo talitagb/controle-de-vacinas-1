@@ -1,4 +1,5 @@
-<div class="row float-end">
+ <br>
+ <div class="row float-end">
   <button class="btn btn-success" routerLink="/vacinacao/criar"> Criar +</button>
 </div>
 
@@ -10,8 +11,6 @@
       <th> Data Próxima aplicação </th>
       <th> ID Usuário </th>
       <th> ID Vacina </th>
-      <th> Nome Usuário </th>
-      <th> Nome Vacina </th>
   </tr>
 
   <tr *ngFor="let p of vacinacao">
@@ -21,10 +20,10 @@
     <td> {{ p.dataProxAplic}} </td>
     <td> {{ p.idUsuario}} </td>
     <td> {{ p.idVacina}} </td>
-    <td> {{ p.usuario?.nomeUsuario}} </td>
-    <td> {{ p.vacina}} </td>
     <td>
       <button class="btn btn-outline-info"[routerLink]="['/vacinacao/editar', p.id]">Editar</button>
+    </td>
+    <td>
       <button class="btn btn-outline-danger" (click)="onDelete(p.id!)">Deletar</button>
     </td>
   </tr>
