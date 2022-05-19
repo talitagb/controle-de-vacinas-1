@@ -33,6 +33,28 @@
         [mensagem]="'Erro ao preencher Data da próxima aplicação'"></app-mostrar-mensagem>
     </div>
   </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-8">
+      <div class="form-group">
+        <label>ID Usuário</label>
+        <input type="text" class="form-control" formControlName="usuario?.idUsuario" placeholder="ID do usuário">
+      </div>
+
+      <app-mostrar-mensagem [controles]="meuForm.controls['usuario?.idUsuario']"
+        [mensagem]="'Erro ao preencher ID usuário'"></app-mostrar-mensagem>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-8">
+      <div class="form-group">
+        <label>ID Vacina</label>
+        <input type="text" class="form-control" formControlName="vacina?idVacina" placeholder="ID da Vacina">
+      </div>
+
+      <app-mostrar-mensagem [controles]="meuForm.controls['vacina?idVacina']"
+        [mensagem]="'Erro ao preencher ID vacina'"></app-mostrar-mensagem>
+    </div>
+  </div>
   <br>
   <div class="row d-flex justify-content-center">
     <button type="submit" class="btn btn-primary">Salvar</button>

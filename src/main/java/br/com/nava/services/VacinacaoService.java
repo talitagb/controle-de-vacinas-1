@@ -41,8 +41,6 @@ public class VacinacaoService {
 			VacinacaoEntity vacinacaoBD = optional.get();
 			vacinacaoBD.setDataAplic(vacinacao.getDataAplic());
 			vacinacaoBD.setDataProxAplic(vacinacao.getDataProxAplic());
-			vacinacaoBD.setIdUsuario(vacinacao.getIdUsuario());
-			vacinacaoBD.setIdVacina(vacinacao.getIdVacina());
 			vacinacaoBD.setNumDose(vacinacao.getNumDose());
 			vacinacaoBD.setUsuario(vacinacao.getUsuario());
 			vacinacaoBD.setVacina(vacinacao.getVacina());

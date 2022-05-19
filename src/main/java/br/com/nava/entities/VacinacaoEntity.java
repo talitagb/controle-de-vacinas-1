@@ -41,12 +41,6 @@ public class VacinacaoEntity {
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataProxAplic;
 	
-	@Column(name = "id_usuario")
-	private String idUsuario;
-	
-	@Column(name = "id_vacina")
-	private String idVacina;
-	
 	//Relacionamento com o Usuario 
 	@ManyToOne
 	@JoinColumn(name = "USUARIO_ID")

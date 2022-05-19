@@ -20,8 +20,6 @@ public class VacinacaoDTO {
 	private LocalDate dataAplic;
 	private String numDose;
 	private LocalDate dataProxAplic;
-	private String idUsuario;
-	private String idVacina;
 	private UsuarioEntity usuario;
 	private VacinaEntity vacina;
 	
